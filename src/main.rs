@@ -55,7 +55,7 @@ async fn main() {
                 if is_online {
                     sp.stop_and_persist(format!("{}", "✔".green()).as_str(), format!("{}", format!("{name} is online!").bright_green()).into());
                 } else {
-                    sp.stop_and_persist(format!("{}", "⚠".yellow()).as_str(), format!("{} {}", format!("{name} is online but experiencing some issues.").bright_yellow(), format!("(non OK HTTP response").bright_black()).into());
+                    sp.stop_and_persist(format!("{}", "⚠".yellow()).as_str(), format!("{} {}", format!("{name} is online but experiencing some issues.").bright_yellow(), format!("(non OK HTTP response)").bright_black()).into());
                 }
             }
             Err(_e) => sp.stop_and_persist(format!("{}", "✖".red()).as_str(), format!("{}", format!("Failed to reach {name}!").bright_red()).into()),
